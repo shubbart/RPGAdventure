@@ -5,6 +5,7 @@ struct Player
 {
 	string name;
 
+	int lvl;
 	int classnum;
 	char pClass;
 	
@@ -34,8 +35,8 @@ struct playerClass
 
 struct Warrior
 {
-	int wHp;
-	int wMp;
+	int wHp = 15 + (wCon / 3);
+	int wMp = 8 + (wInt / 4);
 
 	int wStr;
 	int wInt;
@@ -47,8 +48,8 @@ struct Warrior
 
 struct Paladin
 {
-	int pHp;
-	int pMp;
+	int pHp = 20 + (pCon / 2);
+	int pMp = 14 + (pInt / 3);
 
 	int pStr;
 	int pInt;
@@ -60,8 +61,8 @@ struct Paladin
 
 struct Wizzard
 {
-	int WHp;
-	int WMp;
+	int WHp = 10 + (WCon / 4);
+	int WMp = 20 + (WInt / 2);
 
 	int WStr;
 	int WInt;
@@ -81,4 +82,6 @@ Player createPlayer()
 
 
 	printf("You are now a %c named $s\n", player.pClass, 7, player.name.c_str());
+
+	return player;
 }
