@@ -5,11 +5,15 @@ struct Player
 {
 	string name;
 
-	int lvl;
+	int hp;
+	int mp;
+	int lvl = 1;
 	int classnum;
-	char pClass;
-	
 
+	int Str;
+	int Int;
+	int Dex;
+	int Con;
 
 	int gold;
 	int inv[];
@@ -73,6 +77,10 @@ struct Wizzard
 Player createPlayer()
 {
 	Player player;
+	Warrior warrior;
+	Paladin paladin;
+	Wizzard wizzard;
+
 
 	printf("Name your character: \n");
 	std::cin >> player.name;
@@ -80,6 +88,11 @@ Player createPlayer()
 	printf("Select your class:\n1: Warrior\n2: Paladin\n3: Wizard\n");
 	scanf_s("%d", player.classnum);
 
+	if (player.classnum = 1)
+	{
+		
+
+	}
 
 	printf("You are now a %c named $s\n", player.pClass, 7, player.name.c_str());
 
